@@ -1,0 +1,67 @@
+@import "fonts.css";
+
+body {
+	width: 100%;
+	max-width: 1020px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+header {
+	height: 89px;
+	background: #2d303a;
+	color: #FFF; 
+	font-family: Lato-Bold;
+	border-bottom: 6px solid #323746;
+	line-height: 89px;
+}
+
+.logo {
+	float: left;
+	padding-left: 40px;
+	letter-spacing: -0.5px;
+
+}
+
+.logo h1 {
+	display: inline-block;
+	font-size: 25px;
+	margin: 0;
+
+}
+
+.logo span {
+	font-size: 25px;
+	margin-left: -2.5px;
+	color: #f06c64;
+
+}
+
+.nav {
+	margin: 3px 40px 0 0;
+	padding: 0;
+	float: right;
+}
+
+.nav li {
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 13px;
+	letter-spacing: -0.5px;
+
+}
+.nav a {
+	text-decoration: none;
+	color: #FFF;
+}
+.nav li:not(:first-child):before {
+	content: ' \25CF';
+	font-size: 5px;
+	vertical-align: middle;
+	margin-right: 14px;
+	color: #494e62;
+}
+
+.active a{
+	color: #e36861;
+}
