@@ -120,9 +120,9 @@ header {
 
  .services {
  	background-color: #f2f2f2;
- 	height: 495px;
+ 	/*height: 495px;*/
  	padding: 59px 40px 0 40px;
- 	border-bottom: 2px solid #FFF;
+ 	border-bottom: 6px solid #FFF;
  	box-sizing: border-box;
  }
 
@@ -149,6 +149,7 @@ header {
 	justify-content: space-between;
 	margin-top: 47px;
 	margin-left: 1px;
+	margin-bottom: 33px;
 }
 
 .service_item h3 {
