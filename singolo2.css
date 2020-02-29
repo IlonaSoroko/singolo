@@ -8,6 +8,7 @@
 
 .portfolio {
     background-color: #2d303a;
+    border-bottom: 6px solid #323746;
 }
 
 .portfolio_content {
@@ -44,6 +45,8 @@
 }
 
 .portfolio_images {
+    margin-top: 19px;
+    margin-bottom: 67px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(4, 1fr);
@@ -52,7 +55,7 @@
 
 .portfolio_images div {
     max-width: 220px;
-    max-height: 189px;
+    max-height: 187px;
 }
 
 .portfolio_images img {
