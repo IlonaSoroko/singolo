@@ -1,7 +1,69 @@
-@import "fonts.css";
+.description {
+    color: #767e9e;
+    font-family: Lato-Light;
+    font-size: 18px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
 
-body {
-	width: 100%;
-	max-width: 1020px;
-	margin: 0 auto;
+.portfolio {
+    background-color: #2d303a;
+}
+
+.portfolio_content {
+    max-width: 940px;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.portfolio_button_flex {
+    display: flex;
+    justify-content: space-between;
+    width: 287px;
+}
+
+.portfolio_button_flex button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #666d89;
+    border-radius: 4px;
+    color: #767e9e;
+    font-size: 12px;
+    font-family: Lato-Regular;
+    height: 22px;
+    box-sizing: border-box;
+    cursor: pointer;    
+}
+
+.portfolio_button_flex button:last-child {
+    padding: 0 5px;
+}
+
+.portfolio_button_flex .active {
+    border-color: #dedede;
+    color: #dedede;
+}
+
+.portfolio_images {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.portfolio_images div {
+    max-width: 220px;
+    max-height: 189px;
+}
+
+.portfolio_images img {
+    width: 100%;
+}
+
+.about_us {
+    background-color: #f2f2f2;
+}
+
+.about_us_content {
+    max-width: 940px;
+    margin: auto;
 }
