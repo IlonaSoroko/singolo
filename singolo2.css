@@ -83,9 +83,10 @@
     margin-bottom: 45px;
 }
 
-.about_us_flex {
-    display: flex;
-    justify-content: space-between;
+.about_us_grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 .about_us_member {
@@ -97,7 +98,7 @@
 }
 
 .about_us_member_photo img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .about_us_member h3 {
@@ -133,3 +134,4 @@
     opacity: 0.5;
     cursor: pointer;
 }
+
