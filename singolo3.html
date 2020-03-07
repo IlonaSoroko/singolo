@@ -22,13 +22,14 @@
             <div class="quote__footer_flex">
                <div class="quote__footer_left">
                   <form class="quote__form">
-                     <input type="text" name="name" class="form__field form__field_narrow"
-                        placeholder="Name (Requared)">
-                     <input type="text" name="email" class="form__field form__field_narrow"
+                     <input type="text" name="name" required class="form__field form__field_narrow"
+                        placeholder="Name (Required)" pattern="^[A-Z][A-Za-z' -]+$">
+                     <input type="email" name="email" required class="form__field form__field_narrow"
                         placeholder="Email (Required)">
                      <input type="text" name="subject" class="form__field form__field_narrow" placeholder="Subject">
-                     <input type="text" name="description" class="form__field form__field_wide"
-                        placeholder="Describe your project in detail...">
+                     <textarea name="description" class="form__field form__field_wide"
+                        placeholder="Describe your project in detail..."></textarea>
+                     <input type="submit" value="Submit" class="form__button-submit">
                   </form>
                </div>
                <div class="quote__footer_right">
@@ -66,6 +67,20 @@
          </div>
       </div>
    </div>
+   <footer>
+      <div class="footer__content">
+         <p>© Copyright 2013</p>
+         <div class="footer__icons_flex">
+            <a href="#"><img src="assets/images/facebook.png"></a>
+            <a href="#"><img src="assets/images/google.png"></a>
+            <a href="#"><img src="assets/images/twitter.png"></a>
+            <a href="#"><img src="assets/images/linkedin.png"></a>
+         </div>
+      </div>
+      </div>
+
+
+   </footer>
 </body>
 
 </html>
