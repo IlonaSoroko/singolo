@@ -7,8 +7,6 @@
    max-width: 940px;
    margin: auto;
 }
-.quote__header {
-}
 .quote__header h2 {
    color: #f0d8d9;
    letter-spacing: -0.2px;
@@ -26,8 +24,6 @@
 }
 .quote__footer_left {
    max-width: 620px;
-}
-.quote__form {
 }
 .form__field {
    width: 620px;
@@ -52,9 +48,6 @@
    padding-top: 10px;
    resize: none;
    font-family: Lato-Regular;
-}
-.form__field_wide::placeholder {
-   vertical-align: top;
 }
 .form__button-submit {
    border-radius: 5px;
