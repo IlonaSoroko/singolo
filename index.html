@@ -10,44 +10,56 @@
 
 <body>
 
-   <header class="block-color-dark">
-      <div class="container container-flex header__container ">
-         <div class="header__logo">
-            <h1>SINGOLO</h1>
-            <span>*</span>
-         </div>
-         <div>
-            <ul class="header__menu container-flex">
-               <li class="header__menu-item header__menu-item_active">
-                  <a class="header__menu-item-link" href="#">HOME</a>
-               </li>
-               <li class="header__menu-item">
-                  <a class="header__menu-item-link" href="#">SERVICES</a>
-               </li>
-               <li class="header__menu-item">
-                  <a class="header__menu-item-link" href="#">PORTFOLIO</a></li>
-               <li class="header__menu-item">
-                  <a class="header__menu-item-link" href="#">ABOUT</a>
-               </li>
-               <li class="header__menu-item">
-                  <a class="header__menu-item-link" href="#">CONTACT</a>
-               </li>
-            </ul>
+   <header><a name="home"></a>
+      <div class="header-fixed block-color-dark">
+         <div class="container container-flex header__container ">
+            <div class="header__logo">
+               <h1>SINGOLO</h1>
+               <span>*</span>
+            </div>
+            <div>
+               <ul class="header__menu container-flex">
+                  <li class="header__menu-item header__menu-item_active">
+                     <a class="header__menu-item-link" href="#home">HOME</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a class="header__menu-item-link" href="#services">SERVICES</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a class="header__menu-item-link" href="#portfolio">PORTFOLIO</a></li>
+                  <li class="header__menu-item">
+                     <a class="header__menu-item-link" href="#about">ABOUT</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a class="header__menu-item-link" href="#contact">CONTACT</a>
+                  </li>
+               </ul>
+            </div>
          </div>
       </div>
    </header>
 
+
    <div class="slider block-color-pink">
+      <div class="slider__slides slider__slide-1">
+         <img src="assets/images/Slide-2.png" alt="">
+      </div>
       <div class="slider__container container">
-         <div class="slider__phones">
-            <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
-            <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
-            <a href="#" class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></a>
-            <a href="#" class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></a>
+         <a href="#" class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></a>
+         <a href="#" class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></a>
+         <div class="slider__slides slider__slide-2 slider__slide_active">
+            <div class="slider__phones">
+               <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
+               <div class="monitor-black vertical"></div>
+               <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
+               <div class="monitor-black horizontal"></div>
+            </div>
          </div>
       </div>
+
    </div>
 
+   <a name="services"></a>
    <div class="services block-color-light">
       <div class="container">
          <h2 class="services__heading heading">Our Services</h2>
@@ -76,7 +88,8 @@
                <div class="services__service-item-image heart"></div>
                <div class="services__service-item-block">
                   <h3 class="subheading services__service-item-subheading">Love Is The Answer</h3>
-                  <p class="text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+                  <p class="text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
+                     felis.
                      Quisque
                      condimentum.</p>
                </div>
@@ -101,7 +114,8 @@
                <div class="services__service-item-image star"></div>
                <div class="services__service-item-block">
                   <h3 class="subheading services__service-item-subheading">Feel Like A Star</h3>
-                  <p class="text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam
+                  <p class="text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae
+                     aliquam
                      tellus.</p>
                </div>
             </div>
@@ -109,6 +123,7 @@
       </div>
    </div>
 
+   <a name="portfolio"></a>
    <div class="portfolio block-color-dark">
       <div class="container">
          <h2 class="heading">Portfolio</h2>
@@ -166,6 +181,7 @@
       </div>
    </div>
 
+   <a name="about"></a>
    <div class="about-us block-color-light">
       <div class="container">
          <h2 class="about-us__heading heading">About Us</h2>
@@ -221,6 +237,7 @@
       </div>
    </div>
 
+   <a name="contact"></a>
    <div class="contacts block-color-pink">
       <div class="container">
          <h2 class="contacts__heading heading">Get a Quote</h2>
@@ -243,7 +260,8 @@
             <div class="contacts__info">
                <h3 class="contacts__info-subheading subheading">Contact Information</h3>
                <p class="contacts__info-text text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
-                  Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus.
+                  Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus
+                  faucibus.
                   Morbi at aliquet turpis, et consequat felis.
                </p>
                <div class="contacts__info-for-communication text">
@@ -286,5 +304,6 @@
    </footer>
 
 </body>
+<script src="script.js"></script>
 
 </html>
