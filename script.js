@@ -34,23 +34,44 @@ deactiveMonitorHorizontal.onclick = monitorHorizontal.onclick;
 
 /* Slider change */
 
-let slides = document.querySelectorAll('.slider__slides');
-let index = 1;
+let width = 1020;
+let count = 4;
+let slider = document.querySelector('.slider__carousel-container > ul');
+let slides = document.querySelectorAll('.slider__carousel-container li');
+let position = -width;
 
 document.querySelector('.slider__arrow-left').onclick = function () {
-   slides[index].classList.remove('slider__slide_active');
-   index--;
-   if (index < 0) {
-      index = slides.length - 1;
-   }
-   slides[index].classList.add('slider__slide_active');
+   position += width;
+   slider.addEventListener('transitionend', function (event) {
+      if (event.propertyName == 'opacity') return;
+
+      if (position > -width) {
+         position = -(width * (count - 2));
+         slider.style.transition = 'none';
+         slider.style.marginLeft = position + 'px';
+      }
+
+      deactiveMonitorVertical.classList.remove('monitor-black_active');
+      deactiveMonitorHorizontal.classList.remove('monitor-black_active');
+   });
+   slider.style.transition = 'margin-left 100ms';
+   slider.style.marginLeft = position + 'px';
 }
 
 document.querySelector('.slider__arrow-right').onclick = function () {
-   slides[index].classList.remove('slider__slide_active');
-   index++;
-   if (index > slides.length - 1) {
-      index = 0;
-   }
-   slides[index].classList.add('slider__slide_active');
+   position -= width;
+
+   slider.addEventListener('transitionend', function (event) {
+      if (event.propertyName == 'opacity') return;
+      if (-position >= (width * (count - 1))) {
+         position = -width;
+         slider.style.transition = 'none';
+         slider.style.marginLeft = position + 'px';
+      }
+
+      deactiveMonitorVertical.classList.remove('monitor-black_active');
+      deactiveMonitorHorizontal.classList.remove('monitor-black_active');
+   });
+   slider.style.transition = 'margin-left 100ms';
+   slider.style.marginLeft = position + 'px';
 }
