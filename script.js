@@ -1,14 +1,10 @@
 /* Header */
 
 let menuItems = document.querySelectorAll('.header__menu-item');
-let header = document.querySelector('.header-fixed');
 menuItems.forEach(menuItem => {
    menuItem.onclick = function () {
-      let activeMenuItems = document.querySelectorAll('.header__menu-item_active');
-
-      activeMenuItems.forEach(activeMenuItem =>
-         activeMenuItem.classList.remove('header__menu-item_active'));
-
+      let activeMenuItem = document.querySelector('.header__menu-item_active');
+      activeMenuItem.classList.remove('header__menu-item_active');
       menuItem.classList.add('header__menu-item_active');
    }
 })
@@ -75,3 +71,31 @@ document.querySelector('.slider__arrow-right').onclick = function () {
    slider.style.transition = 'margin-left 100ms';
    slider.style.marginLeft = position + 'px';
 }
+
+/* Portfolio */
+
+let portfolioButtons = document.querySelectorAll('.portfolio__button');
+
+portfolioButtons.forEach(button => {
+   button.onclick = function () {
+      let activeButton = document.querySelector('.portfolio__button_active');
+      activeButton.classList.remove('portfolio__button_active');
+      button.classList.add('portfolio__button_active');
+
+      let images = document.querySelectorAll('.portfolio__image-container');
+      images[0].before(images[11]);
+   }
+});
+
+/* Portfolio images */
+
+let images = document.querySelectorAll('.portfolio__image-container');
+images.forEach(image => {
+   image.addEventListener('click', function () {
+      let activeImage = document.querySelector('.portfolio__image-container_active');
+      if (activeImage !== null) {
+         activeImage.classList.remove('portfolio__image-container_active');
+      }
+      image.classList.add('portfolio__image-container_active');
+   })
+})
