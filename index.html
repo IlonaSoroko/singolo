@@ -49,8 +49,10 @@
             <li>
                <div class="slider__slides block-color-pink">
                   <div class="slider__container container">
+                     <img class="slider__image shadow" src="assets/images/shadow.png">
                      <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
                      <div class="monitor-black vertical"></div>
+                     <img class="slider__image shadow-horizontal" src="assets/images/shadow.png">
                      <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
                      <div class="monitor-black horizontal"></div>
                   </div>
@@ -263,17 +265,25 @@
             ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
             condimentum nibh.</p>
          <div class="contacts__footer container-flex">
-            <form class="contacts__form">
+            <form class="contacts__form" action="#">
                <input type="text" name="name" required class="contacts__form-field contacts__form-field_narrow"
-                  placeholder="Name (Required)" pattern="^[A-Z][A-Za-z' -]+$">
+                  placeholder="Name (Required)">
+               <!-- pattern="^[A-Z][A-Za-z' -]+$" -->
                <input type="email" name="email" required class="contacts__form-field contacts__form-field_narrow"
                   placeholder="Email (Required)">
                <input type="text" name="subject" class="contacts__form-field contacts__form-field_narrow"
                   placeholder="Subject">
-               <textarea name="description" class="contacts__form-field contacts__form-field_wide"
+               <textarea name="description" class="contacts__form-field contacts__form-field_wide" maxlength="300"
                   placeholder="Describe your project in detail..."></textarea>
                <input type="submit" value="Submit" class="contacts__form-button-submit">
             </form>
+            <div class="modal">
+               <div class="modal__window">
+                  <p>The letter was sent</p>
+                  <div class="info"></div>
+                  <button type="button" class="ok">OK</button>
+               </div>
+            </div>
             <div class="contacts__info">
                <h3 class="contacts__info-subheading subheading">Contact Information</h3>
                <p class="contacts__info-text text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.

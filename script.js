@@ -50,7 +50,7 @@ document.querySelector('.slider__arrow-left').onclick = function () {
       deactiveMonitorVertical.classList.remove('monitor-black_active');
       deactiveMonitorHorizontal.classList.remove('monitor-black_active');
    });
-   slider.style.transition = 'margin-left 100ms';
+   slider.style.transition = 'margin-left 110ms';
    slider.style.marginLeft = position + 'px';
 }
 
@@ -68,7 +68,7 @@ document.querySelector('.slider__arrow-right').onclick = function () {
       deactiveMonitorVertical.classList.remove('monitor-black_active');
       deactiveMonitorHorizontal.classList.remove('monitor-black_active');
    });
-   slider.style.transition = 'margin-left 100ms';
+   slider.style.transition = 'margin-left 110ms';
    slider.style.marginLeft = position + 'px';
 }
 
@@ -99,3 +99,34 @@ images.forEach(image => {
       image.classList.add('portfolio__image-container_active');
    })
 })
+
+
+/* Form Contacts */
+
+let modal = document.querySelector('.modal');
+let modalWindow = document.querySelector('.modal__window');
+let okButton = document.querySelector('.ok');
+let form = document.querySelector('form');
+let info = document.querySelector('.info');
+
+
+form.onsubmit = function window() {
+   modal.style.display = 'block';
+   document.body.style.overflowY = 'hidden';
+
+   let subject = document.createElement('p');
+   subject.innerHTML = (form.elements["subject"].value !== "") ? 'Subject: ' + form.elements["subject"].value : 'Without subject';
+   info.prepend(subject);
+
+   let description = document.createElement('p');
+   description.innerHTML = (form.elements["description"].value !== "") ? 'Description: ' + form.elements["description"].value : 'Without description';
+   subject.after(description);
+
+   okButton.onclick = function () {
+      modal.style.display = 'none';
+      document.body.style.overflowY = '';
+      let info = document.querySelector('.info');
+      info.innerHTML = '';
+   }
+   return false;
+}
