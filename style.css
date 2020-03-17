@@ -4,6 +4,7 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 body {
@@ -80,11 +81,12 @@ header {
 .header-fixed {
    font-family: Lato-Bold;
    line-height: 89px;
-   /* position: fixed; */
-   z-index: 9999;
+   position: fixed;
+   z-index: 100;
    max-width: 1020px;
    width: 100%;
    height: 95px;
+   transition: all 0.2s;
 }
 
 .header__container {
@@ -128,7 +130,7 @@ header {
 }
 
 .header__menu-item-link:hover,
-.header__menu-item_active > .header__menu-item-link {
+.header__menu-item_active {
    color: #e36861;
 }
 
@@ -223,7 +225,7 @@ header {
 }
 
 .slider__arrow {
-   z-index: 1000;
+   z-index: 50;
    background: none;
    border: none;
 }
@@ -465,6 +467,7 @@ header {
    height: 30px;
    background-color: #d6564f;
    color: #f0d8d9;
+   cursor: pointer;
 }
 
 .modal {
@@ -473,7 +476,7 @@ header {
    left: 0;
    top: 0;
    overflow: auto;
-   z-index: 1;
+   z-index: 200;
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.7);
@@ -484,9 +487,9 @@ header {
    text-align: left;
    display: inline-block;
    background-color: #e36861;
-   margin-top: 20%;
+   margin-top: 15%;
    padding: 20px;
-   max-width: 50%;
+   max-width: 70%;
    min-width: 30%;
    border-radius: 5px;
    font-family: 'Lato-Light';

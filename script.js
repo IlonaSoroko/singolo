@@ -1,6 +1,18 @@
 /* Header */
 
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+   let currentScrollPos = window.pageYOffset;
+   if (prevScrollpos < currentScrollPos) {
+      header.style.top = "-100px";
+   } else {
+      header.style.top = "0";
+   }
+   prevScrollpos = currentScrollPos;
+}
+
 let menuItems = document.querySelectorAll('.header__menu-item');
+let header = document.querySelector('.header-fixed');
 menuItems.forEach(menuItem => {
    menuItem.onclick = function () {
       let activeMenuItem = document.querySelector('.header__menu-item_active');
@@ -127,6 +139,7 @@ form.onsubmit = function window() {
       document.body.style.overflowY = '';
       let info = document.querySelector('.info');
       info.innerHTML = '';
+      form.reset();
    }
    return false;
 }
