@@ -72,10 +72,20 @@ a {
    text-align: justify;
 }
 
+.point {
+   display: block;
+   position: relative;
+   top: -94px;
+   visibility: hidden;
+}
+
 /* Header */
 
 header {
    height: 95px;
+}
+#home {
+height: 695px;
 }
 
 .header-fixed {
@@ -86,11 +96,11 @@ header {
    max-width: 1020px;
    width: 100%;
    height: 95px;
-   transition: all 0.2s;
 }
 
 .header__container {
    letter-spacing: -0.5px;
+   height: 95px;
 }
 
 .header__logo h1 {

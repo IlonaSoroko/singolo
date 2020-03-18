@@ -9,88 +9,89 @@
 </head>
 
 <body>
-   <a name="home" class="point"></a>
-   <header class="block-color-dark">
-      <div class="header-fixed block-color-dark">
-         <div class="container container-flex header__container ">
-            <div class="header__logo">
-               <h1>SINGOLO</h1>
-               <span>*</span>
-            </div>
-            <div>
-               <ul class="header__menu container-flex">
-                  <a class="header__menu-item-link" href="#home">
-                     <li class="header__menu-item header__menu-item_active">
-                        HOME
-                     </li>
-                  </a>
-                  <a class="header__menu-item-link" href="#services">
-                     <li class="header__menu-item">
-                        SERVICES
-                     </li>
-                  </a>
-                  <a class="header__menu-item-link" href="#portfolio">
-                     <li class="header__menu-item">
-                        PORTFOLIO
-                     </li>
-                  </a>
-                  <a class="header__menu-item-link" href="#about">
-                     <li class="header__menu-item">
-                        ABOUT
-                     </li>
-                  </a>
-                  <a class="header__menu-item-link" href="#contact">
-                     <li class="header__menu-item">
-                        CONTACT
-                     </li>
-                  </a>
-               </ul>
+   <a class="point" id="home_anchor"></a>
+   <div id="home">
+      <header>
+         <div class="header-fixed block-color-dark">
+            <div class="container container-flex header__container ">
+               <div class="header__logo">
+                  <h1>SINGOLO</h1>
+                  <span>*</span>
+               </div>
+               <div>
+                  <ul class="header__menu container-flex">
+                     <a class="header__menu-item-link" href="#home_anchor" name="home">
+                        <li class="header__menu-item">
+                           HOME
+                        </li>
+                     </a>
+                     <a class="header__menu-item-link" href="#services_anchor" name="services">
+                        <li class="header__menu-item">
+                           SERVICES
+                        </li>
+                     </a>
+                     <a class="header__menu-item-link" href="#portfolio_anchor" name="portfolio">
+                        <li class="header__menu-item">
+                           PORTFOLIO
+                        </li>
+                     </a>
+                     <a class="header__menu-item-link" href="#about_anchor" name="about">
+                        <li class="header__menu-item">
+                           ABOUT
+                        </li>
+                     </a>
+                     <a class="header__menu-item-link" href="#contacts_anchor" name="contacts">
+                        <li class="header__menu-item">
+                           CONTACT
+                        </li>
+                     </a>
+                  </ul>
+               </div>
             </div>
          </div>
-      </div>
-   </header>
+      </header>
 
-
-   <div class="slider">
-      <div class="slider__carousel-container">
-         <ul>
-            <li>
-               <img class="slider__slides" src="assets/images/Slide-2.png">
-            </li>
-            <li>
-               <div class="slider__slides block-color-pink">
-                  <div class="slider__container container">
-                     <img class="slider__image shadow" src="assets/images/shadow.png">
-                     <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
-                     <div class="monitor-black vertical"></div>
-                     <img class="slider__image shadow-horizontal" src="assets/images/shadow.png">
-                     <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
-                     <div class="monitor-black horizontal"></div>
+      <section class="slider">
+         <div class="slider__carousel-container">
+            <ul>
+               <li>
+                  <img class="slider__slides" src="assets/images/Slide-2.png">
+               </li>
+               <li>
+                  <div class="slider__slides block-color-pink">
+                     <div class="slider__container container">
+                        <img class="slider__image shadow" src="assets/images/shadow.png">
+                        <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
+                        <div class="monitor-black vertical"></div>
+                        <img class="slider__image shadow-horizontal" src="assets/images/shadow.png">
+                        <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
+                        <div class="monitor-black horizontal"></div>
+                     </div>
                   </div>
-               </div>
-            </li>
-            <li>
-               <img class="slider__slides" src="assets/images/Slide-2.png">
-            </li>
-            <li>
-               <div class="slider__slides block-color-pink">
-                  <div class="slider__container container">
-                     <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
-                     <div class="monitor-black vertical"></div>
-                     <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
-                     <div class="monitor-black horizontal"></div>
+               </li>
+               <li>
+                  <img class="slider__slides" src="assets/images/Slide-2.png">
+               </li>
+               <li>
+                  <div class="slider__slides block-color-pink">
+                     <div class="slider__container container">
+                        <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
+                        <div class="monitor-black vertical"></div>
+                        <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
+                        <div class="monitor-black horizontal"></div>
+                     </div>
                   </div>
-               </div>
-            </li>
+               </li>
 
-         </ul>
-         <button class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></button>
-         <button class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></button>
-      </div>
+            </ul>
+            <button class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></button>
+            <button class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></button>
+         </div>
+      </section>
    </div>
 
-   <a name="services" class="point"></a>
-   <div class="services block-color-light">
+   <a class="point" id="services_anchor"></a>
+   <div class="services block-color-light" id="services">
       <div class="container">
          <h2 class="services__heading heading">Our Services</h2>
          <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris
@@ -153,8 +154,8 @@
       </div>
    </div>
 
-   <a name="portfolio" class="point"></a>
-   <div class="portfolio block-color-dark">
+   <a class="point" id="portfolio_anchor"></a>
+   <div class="portfolio block-color-dark" id="portfolio">
       <div class="container">
          <h2 class="heading">Portfolio</h2>
          <p class="description">Duis mollis, est non commodo luctus, nisi erat porttitor
@@ -211,8 +212,8 @@
       </div>
    </div>
 
-   <a name="about" class="point"></a>
-   <div class="about-us block-color-light">
+   <a class="point" id="about_anchor"></a>
+   <div class="about-us block-color-light" id="about">
       <div class="container">
          <h2 class="about-us__heading heading">About Us</h2>
          <p class="description">Fusce dapibus, tellus ac cursus commodo,
@@ -267,8 +268,8 @@
       </div>
    </div>
 
-   <a name="contact" class="point"></a>
-   <div class="contacts block-color-pink">
+   <a class="point" id="contacts_anchor"></a>
+   <div class="contacts block-color-pink" id="contacts">
       <div class="container">
          <h2 class="contacts__heading heading">Get a Quote</h2>
          <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris
