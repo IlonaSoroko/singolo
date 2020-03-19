@@ -4,12 +4,14 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 body {
 	width: 100%;
 	max-width: 1020px;
-	margin: 0 auto;
+   margin: 0 auto;
+   scroll-behavior: smooth;
 }
 
 a {
@@ -70,16 +72,35 @@ a {
    text-align: justify;
 }
 
+.point {
+   display: block;
+   position: relative;
+   top: -94px;
+   visibility: hidden;
+}
+
 /* Header */
 
 header {
    height: 95px;
+}
+#home {
+height: 695px;
+}
+
+.header-fixed {
    font-family: Lato-Bold;
    line-height: 89px;
+   position: fixed;
+   z-index: 100;
+   max-width: 1020px;
+   width: 100%;
+   height: 95px;
 }
 
 .header__container {
    letter-spacing: -0.5px;
+   height: 95px;
 }
 
 .header__logo h1 {
@@ -119,33 +140,144 @@ header {
 }
 
 .header__menu-item-link:hover,
-.header__menu-item_active > .header__menu-item-link {
+.header__menu-item_active {
    color: #e36861;
 }
 
 /* Slider */
 
 .slider {
-	height: 600px;
+   position: absolute;
+   width: 1020px;
+   height: 600px;
+}
+
+.slider__carousel-container {
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+}
+
+.slider__slides {
+	display: none;
 	position: relative;
+	animation: 0.4s ease-in-out;
+	height: 600px;
+	width: 1020px;
+}
+
+.slider__slides > img {
+height: 100%;
+}
+
+.slider__slides.active,
+.slider__slides.next{
+display: block;
+}
+
+.slider__slides.next {
+position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 .slider__container {
-   padding-top: 52px;
+   padding-top: 51px;
    position: relative;
+   /* height: 594px; */
 }
 
 .slider__image {
    position: absolute;
+   z-index: 1;
 }
 
 .slider__phone-vertical {
-   left: 70px;
+   left: 72px;
+   top: 52.5px;
 }
 
 .slider__phone-horizontal {
-   right: 71px;
-   top: 172px;
+   right: 97px;
+   top: 174px;
+}
+
+.shadow {
+   left: 72px;
+   top: 53px;
+}
+
+.shadow-horizontal {
+   transform: rotate(90deg) scale(1, -1);
+   right: 193px;
+   top: 52px;
+}
+
+.monitor-black {
+   height: 334px;
+   width: 189px;
+   background-color: #000;
+   position: absolute;
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+.monitor-black_active {
+   opacity: 1;
+   z-index: 1000;
+}
+
+.monitor-black.vertical {
+   left: 85.5px;
+   top: 117px;
+}
+
+.monitor-black.horizontal {
+   left: 517px;
+   top: 114.5px;
+   transform: rotate(90deg);
+}
+
+.slider__arrow {
+   z-index: 50;
+   background: none;
+   border: none;
 }
 
 .slider__arrow:hover {
@@ -154,12 +286,12 @@ header {
 
 .slider__arrow-left {
    top: 281px;
-   left: 1px;
+   left: 42px;
 }
 
 .slider__arrow-right {
    transform: rotate(180deg);
-   right: 0;
+   right: 40px;
 	top: 276px;
 }
 
@@ -274,6 +406,16 @@ header {
    max-height: 187px;
 }
 
+.portfolio__image-container img {
+   width: 100%;
+   height: 110%;
+   max-height: 187px;
+}
+
+.portfolio__image-container_active img {
+   border: 5px solid #F06C64;
+}
+
 /* About us */
 
 .about-us {
@@ -347,7 +489,8 @@ header {
    background-color: #d6564f;
    border-style: none;
    margin-bottom: 16px;
-   padding-left: 15px;
+   padding: 0 15px;
+   color: #f0d8d9;
 }
 
 .contacts__form-field::placeholder {
@@ -374,6 +517,43 @@ header {
    height: 30px;
    background-color: #d6564f;
    color: #f0d8d9;
+   cursor: pointer;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   left: 0;
+   top: 0;
+   overflow: auto;
+   z-index: 200;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7);
+   text-align: center;
+}
+
+.modal__window {
+   text-align: left;
+   display: inline-block;
+   background-color: #e36861;
+   margin-top: 15%;
+   padding: 20px;
+   max-width: 70%;
+   min-width: 30%;
+   border-radius: 5px;
+   font-family: 'Lato-Light';
+   word-wrap: break-word;
+}
+
+.ok {
+   background-color: #f48c8f;
+   color: #FFF;
+   padding: 1%;
+   width: 15%;
+   border-style: none;
+   border-radius: 5px;
+   margin-top: 50px;
 }
 
 .contacts__info {
