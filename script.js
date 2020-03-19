@@ -19,7 +19,6 @@ function onScroll(event) {
    })
 }
 
-
 /* Slider */
 
 /* phone's monitors deactivation */
@@ -41,47 +40,54 @@ deactiveMonitorHorizontal.onclick = monitorHorizontal.onclick;
 
 /* Slider change */
 
-let width = 1020;
-let count = 4;
-let slider = document.querySelector('.slider__carousel-container > ul');
-let slides = document.querySelectorAll('.slider__carousel-container li');
-let position = -width;
+let slides = document.querySelectorAll('.slider__slides');
+let currentSlide = 0;
+let isEnabled = true;
 
-document.querySelector('.slider__arrow-left').onclick = function () {
-   position += width;
-   slider.addEventListener('transitionend', function (event) {
-      if (event.propertyName == 'opacity') return;
-
-      if (position > -width) {
-         position = -(width * (count - 2));
-         slider.style.transition = 'none';
-         slider.style.marginLeft = position + 'px';
-      }
-
-      deactiveMonitorVertical.classList.remove('monitor-black_active');
-      deactiveMonitorHorizontal.classList.remove('monitor-black_active');
-   });
-   slider.style.transition = 'margin-left 110ms';
-   slider.style.marginLeft = position + 'px';
+function changeCurrentSlide(n) {
+   currentSlide = (n + slides.length) % slides.length;
 }
 
-document.querySelector('.slider__arrow-right').onclick = function () {
-   position -= width;
-
-   slider.addEventListener('transitionend', function (event) {
-      if (event.propertyName == 'opacity') return;
-      if (-position >= (width * (count - 1))) {
-         position = -width;
-         slider.style.transition = 'none';
-         slider.style.marginLeft = position + 'px';
-      }
-
-      deactiveMonitorVertical.classList.remove('monitor-black_active');
-      deactiveMonitorHorizontal.classList.remove('monitor-black_active');
+function hideSlide(direction) {
+   isEnabled = false;
+   slides[currentSlide].classList.add(direction);
+   slides[currentSlide].addEventListener('animationend', function () {
+      this.classList.remove('active', direction);
    });
-   slider.style.transition = 'margin-left 110ms';
-   slider.style.marginLeft = position + 'px';
 }
+
+function showSlide(direction) {
+   slides[currentSlide].classList.add('next', direction);
+   slides[currentSlide].addEventListener('animationend', function () {
+      this.classList.remove('next', direction);
+      this.classList.add('active');
+      isEnabled = true;
+   });
+}
+
+function nextSlide(n) {
+   hideSlide('to-left');
+   changeCurrentSlide(n + 1);
+   showSlide('from-right');
+}
+
+function previousSlide(n) {
+   hideSlide('to-right');
+   changeCurrentSlide(n - 1);
+   showSlide('from-left');
+}
+
+document.querySelector('.slider__arrow-left').addEventListener('click', function () {
+   if (isEnabled) {
+      previousSlide(currentSlide);
+   }
+});
+
+document.querySelector('.slider__arrow-right').addEventListener('click', function () {
+   if (isEnabled) {
+      nextSlide(currentSlide);
+   }
+});
 
 /* Portfolio */
 

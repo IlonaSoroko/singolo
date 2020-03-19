@@ -13,14 +13,14 @@
    <div id="home">
       <header>
          <div class="header-fixed block-color-dark">
-            <div class="container container-flex header__container ">
+            <div class="container container-flex header__container">
                <div class="header__logo">
                   <h1>SINGOLO</h1>
                   <span>*</span>
                </div>
                <div>
                   <ul class="header__menu container-flex">
-                     <a class="header__menu-item-link" href="#home_anchor" name="home">
+                     <a class="header__menu-item-link header__menu-item_active" href="#home_anchor" name="home">
                         <li class="header__menu-item">
                            HOME
                         </li>
@@ -53,40 +53,22 @@
 
       <section class="slider">
          <div class="slider__carousel-container">
-            <ul>
-               <li>
-                  <img class="slider__slides" src="assets/images/Slide-2.png">
-               </li>
-               <li>
-                  <div class="slider__slides block-color-pink">
-                     <div class="slider__container container">
-                        <img class="slider__image shadow" src="assets/images/shadow.png">
-                        <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
-                        <div class="monitor-black vertical"></div>
-                        <img class="slider__image shadow-horizontal" src="assets/images/shadow.png">
-                        <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
-                        <div class="monitor-black horizontal"></div>
-                     </div>
-                  </div>
-               </li>
-               <li>
-                  <img class="slider__slides" src="assets/images/Slide-2.png">
-               </li>
-               <li>
-                  <div class="slider__slides block-color-pink">
-                     <div class="slider__container container">
-                        <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
-                        <div class="monitor-black vertical"></div>
-                        <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
-                        <div class="monitor-black horizontal"></div>
-                     </div>
-                  </div>
-               </li>
-
-            </ul>
-            <button class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></button>
-            <button class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></button>
+            <div class="slider__slides block-color-pink active">
+               <div class="slider__container container">
+                  <img class="slider__image shadow" src="assets/images/shadow.png">
+                  <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
+                  <div class="monitor-black vertical"></div>
+                  <img class="slider__image shadow-horizontal" src="assets/images/shadow.png">
+                  <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
+                  <div class="monitor-black horizontal"></div>
+               </div>
+            </div>
+            <div class="slider__slides">
+               <img src="assets/images/Slide-2.png">
+            </div>
          </div>
+         <button class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></button>
+         <button class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></button>
       </section>
    </div>
 
