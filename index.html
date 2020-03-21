@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width">
    <title>Singolo</title>
    <link rel="stylesheet" href="style.css">
 </head>
@@ -53,22 +53,28 @@
 
       <section class="slider">
          <div class="slider__carousel-container">
-            <div class="slider__slides block-color-pink active">
-               <div class="slider__container container">
-                  <img class="slider__image shadow" src="assets/images/shadow.png">
-                  <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
-                  <div class="monitor-black vertical"></div>
-                  <img class="slider__image shadow-horizontal" src="assets/images/shadow.png">
-                  <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
-                  <div class="monitor-black horizontal"></div>
+            <div class="slider__slides active block-color-pink">
+               <div class="slider__container">
+                  <div class="slider__phone-vertical-container">
+                     <img class="slider__image slider__phone-vertical" src="assets/images/iPhone Vertical.png">
+                     <div class="slider__display-vertical">
+                        <img src="assets/images/phone-vertical-display.png">
+                     </div>
+                  </div>
+                  <div class="slider__phone-horizontal-container">
+                     <img class="slider__image slider__phone-horizontal" src="assets/images/iPhone Horizontal.png">
+                     <div class="slider__display-horizontal">
+                        <img src="assets/images/phone-horizontal-display.png">
+                     </div>
+                  </div>
                </div>
             </div>
             <div class="slider__slides">
                <img src="assets/images/Slide-2.png">
             </div>
          </div>
-         <button class="slider__image slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></button>
-         <button class="slider__image slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></button>
+         <button class="slider__arrow slider__arrow-left"><img src="assets/images/chev.svg"></button>
+         <button class="slider__arrow slider__arrow-right"><img src="assets/images/chev.svg"></button>
       </section>
    </div>
 

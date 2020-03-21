@@ -23,20 +23,20 @@ function onScroll(event) {
 
 /* phone's monitors deactivation */
 
-let monitorVertical = document.querySelector('.slider__phone-vertical');
-let monitorHorizontal = document.querySelector('.slider__phone-horizontal');
-let deactiveMonitorVertical = document.querySelector('.monitor-black.vertical');
-let deactiveMonitorHorizontal = document.querySelector('.monitor-black.horizontal');
+let monitorVertical = document.querySelector('.slider__phone-vertical-container');
+let monitorHorizontal = document.querySelector('.slider__phone-horizontal-container');
+let deactiveMonitorVertical = document.querySelector('.slider__display-vertical');
+let deactiveMonitorHorizontal = document.querySelector('.slider__display-horizontal');
 
+deactiveMonitorVertical.onclick = monitorVertical.onclick;
 monitorVertical.onclick = function () {
    deactiveMonitorVertical.classList.toggle('monitor-black_active');
 }
-deactiveMonitorVertical.onclick = monitorVertical.onclick;
 
+deactiveMonitorHorizontal.onclick = monitorHorizontal.onclick;
 monitorHorizontal.onclick = function () {
    deactiveMonitorHorizontal.classList.toggle('monitor-black_active');
 }
-deactiveMonitorHorizontal.onclick = monitorHorizontal.onclick;
 
 /* Slider change */
 
