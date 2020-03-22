@@ -19,7 +19,7 @@ a {
 }
 
 .container {
-   max-width: 92%;
+   max-width: 92.2%;
 	margin: 0 40px;
 }
 
@@ -86,7 +86,7 @@ header {
 }
 
 #home {
-height: 695px;
+max-height: 695px;
 }
 
 .header-fixed {
@@ -118,7 +118,6 @@ height: 695px;
 }
 
 .header__menu {
-   margin-top: 5px;
    width: 371px;
 }
 
@@ -150,28 +149,30 @@ height: 695px;
 .slider {
    max-width: 1020px;
    max-height: 600px;
-   height: 100%;
    position: relative;
 }
 
 .slider__carousel-container {
-   height: 100%;
-   width: 100%;
    overflow: hidden;
    position: relative;
-   background-color: #f06c64;
 }
 
 .slider__slides {
 	display: none;
 	position: relative;
-	animation: 0.4s ease-in-out;
-	height: 600px;
-	width: 1020px;
+   animation: 0.4s ease-in-out;
+   max-height: 594px;
 }
 
-.slider__slides > img {
-   height: 100%;
+.slide-2 {
+   background-color: #648BF0;
+}
+
+.slide-2 img,
+.slide-1 > img {
+   display: block;
+   margin: 0 auto;
+   width: 100%;
 }
 
 .slider__slides.active,
@@ -222,26 +223,38 @@ height: 695px;
    }
 
 .slider__container {
-   margin: 0 auto;
-   margin-top: 54px;
-   position: relative;
-   height: 80.5%;
-   width: 78.04%;
-   display: flex;
-   justify-content: space-between;
+   position: absolute;
+   top: 9.1%;
+   left: 10.98%;
+   width: 78.5%;
+   height: 81.4%;
+   z-index: 2;
 }
 
 .slider__phone-vertical-container {
    position: relative;
-   width: 240px;
-   height: 100%;
+   width: 49.64%;
+   max-width: 240px;
+   max-height: 483px;
+   min-height: 363.74px;
+   min-width: 180.85px;
+   margin-right: 54.42px;
+   background-image: url("assets/images/iPhone Vertical.png");
+   background-size: contain;
+   background-repeat: no-repeat;
 }
 
 .slider__phone-horizontal-container {
    position: relative;
-   height: 240px;
-   width: 483px;
-   margin-top: 120px;
+   max-height: 240px;
+   width: 100%;
+   max-width: 483px;
+   min-width: 363.74px;
+   min-height: 180.85px;
+   margin-top: 15%;
+   background-image: url("assets/images/iPhone Horizontal.png");
+   background-size: contain;
+   background-repeat: no-repeat;
 }
 
 .slider__image {
@@ -254,24 +267,27 @@ height: 695px;
 
 .slider__display-vertical {
    position: relative;
-   margin-top: 64px;
-   margin-left: 14px;
-   width: 189px;
-   height: 334px;
+   margin-top: 27%;
+   margin-left: 5.7%;
+   height: 68.94%;
+   width: 78.33%;
+   max-height: 68.94%;
+   max-width: 78.33%;
 }
 
 .slider__display-vertical img,
 .slider__display-horizontal img {
    width: 100%;
-   height: auto;
+   height: 100%;
+   z-index: 60;
 }
 
 .slider__display-horizontal {
    position: relative;
-   margin-top: 13.5px;
-   margin-left: 60px;
-   width: 334px;
-   height: 189px;
+   margin-top: 2.8%;
+   margin-left: 12.3%;
+   max-width: 68.94%;
+   max-height: 78.33%;
 }
 
 .monitor-black_active {
@@ -280,10 +296,7 @@ height: 695px;
       transition: all 0.5s;
 }
 
-
 .slider__arrow {
-      position: absolute;
-   z-index: 50;
    background: none;
    border: none;
 }
@@ -292,21 +305,27 @@ height: 695px;
 	opacity: 0.5;
 }
 
-.slider__arrow-left {
-   top: 281px;
-   left: 42px;
+.slider__arrows {
+   position: absolute;
+   max-width: 940px;
+   top: 47.17%;
+   left: 3.92%;
+   right: 3.92%;
+   display: flex;
+   justify-content: space-between;
+   z-index: 1;
 }
 
-.slider__arrow-right {
+/* .slider__arrow-right {
    transform: rotate(180deg);
    right: 40px;
 	top: 276px;
-}
+} */
 
 /* Services*/
 
 .services {
-   max-height: 500px;
+   min-height: 500px;
 }
 
 .services__heading {
@@ -316,11 +335,11 @@ height: 695px;
 .services__items {
    flex-flow: row wrap;
    margin-top: 46px;
-   margin-bottom: 34px;
+   min-height: 215px;
 }
 
 .services__service-item {
-   width: 300px;
+   width: 31.91%;    
    margin-bottom: 33px;
 }
 
@@ -356,7 +375,7 @@ height: 695px;
 }
 
 .services__service-item-block {
-   width: 220px;
+   width: 73.33%;
 }
 
 .services__service-item-subheading {
@@ -367,9 +386,9 @@ height: 695px;
 
 /* Portfolio */
 
-.portfolio {
+/* .portfolio {
    max-height: 869px;
-}
+} */
 
 .portfolio__buttons-container {
    width: 287px;
@@ -487,11 +506,11 @@ height: 695px;
 }
 
 .contacts__form {
-   max-width: 620px;
+   width: 65.96%;
 }
 
 .contacts__form-field {
-   width: 620px;
+   width: 100%;
    box-sizing: border-box;
    border-radius: 5px;
    background-color: #d6564f;
@@ -565,7 +584,7 @@ height: 695px;
 }
 
 .contacts__info {
-   max-width: 300px;
+   width: 31.91%;
 }
 
 .contacts__info-subheading {
@@ -627,18 +646,25 @@ footer {
 }
 
 
-/* @media screen and (min-width: 768px) and (max-width: 1019px) {
-   /* .slider__container {
-      max-width: 75.35%;
+@media screen and (max-width: 840px) { 
+   
+   .services__service-item {
+   width: 46.28%;
+   margin-bottom: 5%;
+   } 
+   .services__items {
+      padding-bottom: 12px;
    }
-   .slider__phone-vertical-container {
-      /* max-width: 180.85px; */
-      /* max-height: 363.74px; */
-/*    
-      .slider {
-         height: 451.76px;
-      }
-   #home {
-      height: 546.76px;
+
+}
+   
+@media screen and (max-width: 768px) {
+   .services__service-item {
+   margin-bottom: 8%;
+   } 
+      .portfolio__images {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      max-height: 794px;
    }
-   } */
+}
