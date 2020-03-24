@@ -19,6 +19,17 @@ function onScroll(event) {
    })
 }
 
+/* Menu burger */
+
+let burger = document.querySelector('.menu-burger');
+let navigation = document.querySelector('.navigation');
+
+burger.onclick = function () {
+   navigation.classList.toggle('navigation-active');
+   burger.classList.toggle('menu-burger_active');
+}
+
+
 /* Slider */
 
 /* phone's monitors deactivation */
