@@ -19,6 +19,18 @@ function onScroll(event) {
    })
 }
 
+/* Menu burger */
+
+let burger = document.querySelector('.header__burger');
+
+burger.onclick = function () {
+   burger.classList.toggle('header__burger_active');
+   document.querySelector('.header__nav').classList.toggle('menu_active');
+   document.querySelector('.header__logo').classList.toggle('logo__burger_active');
+   document.querySelector('.burger__logo').classList.toggle('menu_active');
+}
+burger.addEventListener('transitionstart', () => document.querySelector('.body-shadow').classList.toggle('menu_active'));
+
 /* Slider */
 
 /* phone's monitors deactivation */

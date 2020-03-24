@@ -13,13 +13,24 @@
    <div id="home">
       <header>
          <div class="header-fixed block-color-dark">
+            <div class="header__burger">
+               <span></span>
+            </div>
+            <div class="body-shadow"></div>
             <div class="container container-flex header__container">
-               <div class="header__logo">
+
+               <div class="header__logo active">
                   <h1>SINGOLO</h1>
                   <span>*</span>
                </div>
-               <div>
+
+               <div class="header__nav">
+                  <div class="header__logo burger__logo">
+                     <h1>SINGOLO</h1>
+                     <span>*</span>
+                  </div>
                   <ul class="header__menu container-flex">
+
                      <a class="header__menu-item-link header__menu-item_active" href="#home_anchor" name="home">
                         <li class="header__menu-item">
                            HOME
@@ -49,35 +60,36 @@
                </div>
             </div>
          </div>
-      </header>
+   </div>
+   </header>
 
-      <section class="slider block-color-pink">
-         <div class="slider__carousel-container">
-            <div class="slider__slides active slide-1">
-               <img src="assets/images/Slider-1.png">
-               <div class="slider__container container-flex">
-                  <div class="slider__phone-vertical-container">
-                     <div class="slider__display-vertical">
-                        <img src="assets/images/phone-vertical-display.png">
-                     </div>
+   <section class="slider block-color-pink">
+      <div class="slider__carousel-container">
+         <div class="slider__slides active slide-1">
+            <img src="assets/images/Slider-1.png">
+            <div class="slider__container container-flex">
+               <div class="slider__phone-vertical-container">
+                  <div class="slider__display-vertical">
+                     <img src="assets/images/phone-vertical-display.png">
                   </div>
-                  <div class="slider__phone-horizontal-container">
-                     <div class="slider__display-horizontal">
-                        <img src="assets/images/phone-horizontal-display.png">
-                     </div>
+               </div>
+               <div class="slider__phone-horizontal-container">
+                  <div class="slider__display-horizontal">
+                     <img src="assets/images/phone-horizontal-display.png">
                   </div>
                </div>
             </div>
-            <div class="slider__slides slide-2">
-               <img src="assets/images/Slide-2.png">
-            </div>
          </div>
+         <div class="slider__slides slide-2">
+            <img src="assets/images/Slide-2.png">
+         </div>
+      </div>
 
-         <div class="slider__arrows">
-            <button class="slider__arrow slider__arrow-left"><img src="assets/images/arrow-left.png"></button>
-            <button class="slider__arrow slider__arrow-right"><img src="assets/images/arrow-right.png"></button>
-         </div>
-      </section>
+      <div class="slider__arrows">
+         <button class="slider__arrow slider__arrow-left"><img src="assets/images/arrow-left.png"></button>
+         <button class="slider__arrow slider__arrow-right"><img src="assets/images/arrow-right.png"></button>
+      </div>
+   </section>
    </div>
 
    <a class="point" id="services_anchor"></a>

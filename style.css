@@ -70,6 +70,7 @@ a {
    font-family: Lato-Regular;
    line-height: 22px;
    text-align: justify;
+   word-break: break-all;
 }
 
 .point {
@@ -102,6 +103,40 @@ max-height: 695px;
 .header__container {
    letter-spacing: -0.5px;
    height: 95px;
+   align-items: center;
+}
+
+.header__burger {
+   width: 25px;
+   height: 20px;
+   display: none;
+   position: absolute;
+   top: 26px;
+   left: 20px;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+
+.header__burger span,
+.header__burger:before,
+.header__burger:after {
+   content: "";
+   background-color: #fff;
+   position: absolute;
+   width: 100%;
+   height: 2.4px;
+}
+
+.header__burger span {
+   top: 9px;
+}
+
+.header__burger:before {
+   top: 0;
+}
+
+.header__burger:after {
+   bottom: 0;
 }
 
 .header__logo h1 {
@@ -143,6 +178,74 @@ max-height: 695px;
 .header__menu-item_active {
    color: #e36861;
 }
+
+.burger__logo {
+   position: absolute;
+   line-height: 71px;
+   display: none;
+   }
+
+@media screen and (max-width: 767px) {
+   .header__container {
+      height: 71px;
+      display: block;
+   }
+   .header__logo {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.5s;
+   }
+   .header__burger {
+      display: block;
+      z-index: 2;
+   }
+   .header__nav {
+      background-color: #2d303a;
+      padding-left: 71px;
+      width: 278px;
+      height: 100vh;
+      line-height: 85vh;
+      position: absolute;
+      left: -278px;
+      top: 0;
+      transition: all 0.4s;
+   }
+   .header__menu {
+      display: block;
+      width: 100%;
+      line-height: 31px;
+      position: relative;
+      top: 40%;
+   }
+   .header__menu-item {
+      display: block;
+   }
+   .header__menu-item-link:not(:first-child):before {
+      display: none;
+   }
+   .body-shadow {
+      background: rgba(0, 0, 0, 0.7);
+      width: 100vw;
+      height: 100vh;
+      display: none;
+   }
+   .menu_active {
+      left: 0;
+      opacity: 1;
+      display: block;
+}
+.logo__burger_active {
+   text-align: left;
+   display: block;
+}
+
+   .header__burger_active {
+      transform: rotate(90deg);
+   }
+}
+
 
 /* Slider */
 
@@ -236,9 +339,7 @@ max-height: 695px;
    width: 49.64%;
    max-width: 240px;
    max-height: 483px;
-   min-height: 363.74px;
-   min-width: 180.85px;
-   margin-right: 54.42px;
+   margin-right: 9.2%;
    background-image: url("assets/images/iPhone Vertical.png");
    background-size: contain;
    background-repeat: no-repeat;
@@ -249,8 +350,6 @@ max-height: 695px;
    max-height: 240px;
    width: 100%;
    max-width: 483px;
-   min-width: 363.74px;
-   min-height: 180.85px;
    margin-top: 15%;
    background-image: url("assets/images/iPhone Horizontal.png");
    background-size: contain;
@@ -492,9 +591,7 @@ max-height: 695px;
 
 /* Contacts */
 
-.contacts {
-   max-height: 654.5px;
-}
+
 
 .contacts__heading {
    padding-top: 60px;
@@ -666,5 +763,23 @@ footer {
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: repeat(3, 1fr);
       max-height: 794px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .header__logo h1,
+   .header__logo span {
+      font-size: 19.69px;
+      letter-spacing: normal;
+   }
+   .header__logo {
+      margin: 0 auto;
+   }
+   header {
+      height: 71px;
+   }
+   .header-fixed {
+      height: 71px;
+      line-height: 71px;
    }
 }
