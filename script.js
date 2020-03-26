@@ -6,9 +6,17 @@ function onScroll(event) {
    const curPos = window.scrollY + 95;
    const divs = document.querySelectorAll('body > div');
    const links = document.querySelectorAll('.header__menu a');
-   console.log(divs);
+   let lastItem = document.querySelector('.last');
+   console.log(lastItem);
+
    divs.forEach((elem) => {
-      if (elem.offsetTop <= curPos && (elem.offsetTop + elem.offsetHeight) > curPos) {
+      if (+window.innerHeight + (+window.srollY) == document.body.offsetHeight) {
+         links.forEach((a) => {
+            a.classList.remove('header__menu-item_active');
+         })
+         lastItem.classList.add('header__menu-item_active');
+      }
+      else if (elem.offsetTop <= curPos && (elem.offsetTop + elem.offsetHeight) > curPos) {
          links.forEach((a) => {
             a.classList.remove('header__menu-item_active');
             if (elem.getAttribute('id') === a.getAttribute('name')) {
@@ -23,12 +31,19 @@ function onScroll(event) {
 
 let burger = document.querySelector('.menu-burger');
 let navigation = document.querySelector('.navigation');
+let menu_items = document.querySelectorAll('.header__menu-item');
+console.log(menu_items);
 
 burger.onclick = function () {
    navigation.classList.toggle('navigation-active');
    burger.classList.toggle('menu-burger_active');
 }
-
+menu_items.forEach(item => {
+   item.onclick = function () {
+      navigation.classList.toggle('navigation-active');
+      burger.classList.toggle('menu-burger_active');
+   }
+})
 
 /* Slider */
 
