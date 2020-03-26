@@ -289,7 +289,8 @@ bottom: 0;
    max-height: 240px;
    width: 100%;
    max-width: 483px;
-   margin-top: 15%;
+   margin-top: 15.2%;
+   margin-right: 0.8%;
    background-image: url("assets/images/iPhone Horizontal.png");
    background-size: contain;
    background-repeat: no-repeat;
@@ -415,10 +416,6 @@ bottom: 0;
 
 /* Portfolio */
 
-/* .portfolio {
-   max-height: 869px;
-} */
-
 .portfolio__buttons-container {
    width: 287px;
    margin-top: 9px;
@@ -461,6 +458,8 @@ bottom: 0;
 
 .portfolio__image-container {
    width: 100%;
+   max-height: 187px;
+
 }
 
 .portfolio__image-container img {
@@ -482,7 +481,7 @@ bottom: 0;
 .about-us__members {
    display: flex;
    justify-content: space-between;
-   margin-top: 44px;
+   margin-top: 42px;
 }
 
 .about-us__member-block {
@@ -494,7 +493,7 @@ bottom: 0;
 }
 
 .about-us__subheading {
-   margin: 15.5px 0 8px;
+   margin: 13px 0 8px;
    letter-spacing: -0.3px;
    overflow: hidden;
    white-space: nowrap;
@@ -504,7 +503,7 @@ bottom: 0;
 .about-us__member-icons {
    width: 153px;
    padding-top: 22px;
-   padding-bottom: 61px;
+   padding-bottom: 59px;
 }
 
 .about-us__member-icons a {
@@ -557,19 +556,20 @@ bottom: 0;
 }
 
 .contacts__form-field_wide {
-   height: 202px;
+   height: 159px;
    padding-top: 10px;
    resize: none;
    font-family: Lato-Regular;
+   margin-bottom: 8.5px;
 }
 
 .contacts__form-button-submit {
    border-radius: 5px;
    border-style: none;
-   width: 100px;
-   height: 30px;
-   background-color: #d6564f;
-   color: #f0d8d9;
+   width: 136px;
+   height: 38px;
+   background-color: #FBC65F;
+   color: #886A30;
    cursor: pointer;
 }
 
@@ -683,25 +683,21 @@ height: 100%;
 
 @media screen and (max-width: 1019px) { 
    .description {
-      margin-top: 14px;
+      margin-top: 18px;
    }
 
    .services__heading {
       padding-top: 39.24px;
    }
 
-   .services__description {
-      margin-top: 18px;
-   }
-   
    .services__items {
-      margin-top: 28px;
+      margin-top: 38px;
       padding-bottom: 25px;
    }
    
    .services__service-item {
       width: 46.28%;
-      margin-bottom: 39px;
+      margin-bottom: 54px;
    } 
    
    .portfolio__buttons-container {
@@ -723,15 +719,17 @@ height: 100%;
    }
    
    .about-us__members {
-      margin-top: 28px;
+      margin-top: 36px;
    }
    
    .about-us__subheading {
-      margin: 12.06px 0 5px;
+      margin: 0;
+      margin-top: 5px;
    }
    
    .about-us__member-icons {
       padding-bottom: 69px;
+      padding-top: 12px;
    }
    
    .contacts__heading {
@@ -739,9 +737,62 @@ height: 100%;
    }
    
    .contacts__footer {
-      margin-top: 19px;
+      margin-top: 23px;
       margin-bottom: 39.21px;
    }
+
+   .contacts__form-field {
+   margin-bottom: 12px;
+   }
+
+   .contacts__form {
+      width: 63.96%;
+   }
+
+   .contacts {
+      min-height: 630px;
+   }
+
+}
+
+@media screen and (width: 768px) {
+   .slide-2 img, .slide-1 > img {
+      height: 445px;
+   }
+
+   .services__items {
+      width: 660px;
+   }
+
+   .services {
+      height: 675px;
+   }
+
+   .description {
+      letter-spacing: 0.2px;
+   }
+
+   .portfolio {
+      height: 1103px;
+   }
+
+   .portfolio__image-container {
+      height: 183.76px;
+   }
+
+   .about-us {
+      height: 668px;
+   }
+
+   .contacts__info-subheading {
+      margin: 0.5px 0;
+   }
+
+   .contacts__info-text {
+      letter-spacing: 0.5px;
+      margin-bottom: 13px;
+   }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -776,6 +827,7 @@ height: 100%;
 
 	.header__container > .header__logo {
       margin: 0 auto;
+      padding-left: 18px;
 	}
 
 	.navigation {
@@ -864,12 +916,20 @@ height: 100%;
       grid-template-columns: repeat(2, 1fr);
    }
 
+   .portfolio__image-container {
+      max-height: 296px;
+   }
+
    .portfolio__image-container:nth-child(n+9) {
       display: none;
    }
 }
 
 @media screen and (max-width: 375px) {
+   .slide-2 img, .slide-1 > img {
+      max-height: 215px;
+   }
+
    .slider__arrows {
       left: 10px;
       right: 10px;
@@ -883,8 +943,57 @@ height: 100%;
       height: 25px;
    }
 
+   .services__heading {
+      padding-top: 26px;
+   }
+
+   .services__items {
+      margin-top: 30px;
+   }
+
+   .services__service-item {
+      margin-bottom: 28px;
+   }
+
+   .portfolio__heading {
+      padding-top: 40px;
+   }
+
    .portfolio__images {
       grid-gap: 14px;
+      margin-bottom: 35px;
+   }
+
+   .portfolio__image-container {
+      max-height: 128px;
+   }
+
+   .about-us__heading {
+      padding-top: 35px;
+   }
+
+   .about-us__subheading {
+      margin-top: 12px;
+   }
+
+   .about-us__member-icons {
+      padding-bottom: 26px;
+   }
+
+   .contacts__form-button-submit {
+      height: 50px;
+   }
+
+   .contacts__info-subheading {
+      margin-bottom: 0;
+   }
+
+   .contacts__info-text {
+      margin-bottom: 13px;
+   }
+
+   .contacts__footer {
+      margin-bottom: 42px;
    }
 }
 
