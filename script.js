@@ -10,7 +10,8 @@ function onScroll(event) {
    console.log(lastItem);
 
    divs.forEach((elem) => {
-      if (+window.innerHeight + (+window.sсrollY) == document.body.offsetHeight) {
+      if (+window.innerHeight + +window.scrollY == document.body.offsetHeight) {
+         console.log('+');
          links.forEach((a) => {
             a.classList.remove('header__menu-item_active');
          })
